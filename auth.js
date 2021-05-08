@@ -5,9 +5,7 @@ const bodyParser = require('body-parser');
 
 const accessTokenSecret = 'youraccesstokensecret';
 
-app.listen(3000, () => {
-    console.log('Authentication service started on port 3000');
-});
+app.use(bodyParser.json());
 
 const users = [
     {
@@ -21,7 +19,9 @@ const users = [
     }
 ];
 
-app.use(bodyParser.json());
+app.listen(3000, () => {
+    console.log('Authentication service started on port 3000');
+});
 
 app.post('/login', (req, res) => {
     // Read username and password from request body
