@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const accessTokenSecret = 'youraccesstokensecret';
 
 const refreshTokenSecret = 'yourrefreshtokensecrethere';
-const refreshTokens = [];
+let refreshTokens = [];
 
 app.use(bodyParser.json());
 
